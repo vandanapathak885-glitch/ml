@@ -9,7 +9,7 @@ model = joblib.load("loan_model.pkl")
 @app.route('/')
 def home():
     return render_template("index.html")
-@app.route('/predict',method=['POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
    # Collect all four inputs from the form
     age = float(request.form['age'])
